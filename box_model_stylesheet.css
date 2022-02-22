@@ -6,6 +6,8 @@ div{
 span{
     margin-left: 30px;
     margin-top: 30px;
+    /*background-color: #bb3e03;*/
+    font-family: cursive;
 }
 h1{
     background-color: #e9d8a6;
@@ -43,4 +45,7 @@ button{
 }
 body{
     margin: 0;
+}
+h2,p{
+    background-color: black;
 }
