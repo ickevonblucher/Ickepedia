@@ -1,20 +1,20 @@
-let input = (prompt('What would you like to do?'));
+let input = (prompt('What would you like to do?').toLowerCase());
 
 const todos = ['Make bed', 'Clean floors'];
 
-while (input !== 'Quit' && input !== 'q') {
-    if (input === 'List') {
+while (input !== 'quit' && input !== 'q') {
+    if (input === 'list') {
         console.log('*************')
         for (let i = 0; i < todos.length; i++) {
             console.log(`${i}: ${todos[i]}`)
         }
         console.log('*************')
-    } else if (input === 'New') {
+    } else if (input === 'new') {
         const newTodo = prompt('Ok, what is the new todo?');
         todos.push(newTodo);
         console.log(`${newTodo} added to the list!`)
     }
-    else if (input === 'Delete') {
+    else if (input === 'delete') {
         const index = parseInt(prompt('Enter an Index to delete:'));
         if (!Number.isNaN(index)) {
             const deleted = todos.splice(index, 1);
@@ -23,6 +23,6 @@ while (input !== 'Quit' && input !== 'q') {
             console.log('Unknown index')
         }
     }
-    input = (prompt('What would you like to do?'));
+    input = (prompt('What would you like to do?').toLowerCase());
 }
 console.log('Good bye, have a great day!')
