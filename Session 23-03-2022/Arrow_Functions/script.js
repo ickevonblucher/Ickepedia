@@ -53,3 +53,16 @@ const movies = [{
 const movieScore = movies.map(movie => (
     `${movie.title} - ${movie.score / 10}`
 ))
+
+//Arrow functions and the keyword this:
+
+const person = {
+    firstName: "Vigo",
+    lastName: "Mortensen",
+    fullName: function () {
+        return `${this.firstName} ${this.lastName}`
+    }
+
+}//If this were done with an arrow function, the keyword this would refer to the Window not the const were it was defined.
+
+
